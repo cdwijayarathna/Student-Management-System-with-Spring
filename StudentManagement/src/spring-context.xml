@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:beans="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:lang="http://www.springframework.org/schema/lang" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+		http://www.springframework.org/schema/lang http://www.springframework.org/schema/lang/spring-lang-2.5.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-2.5.xsd">
+
+    <bean id="stdRep" class="studentmanagement.SimpleStudentRepository" >
+        <property name="students">
+            <map>
+                <entry>
+                    <key>
+                        <value>1</value>
+                    </key>
+                    <ref bean="student1"/>
+                </entry>
+                <entry>
+                    <key>
+                        <value>2</value>
+                    </key>
+                    <ref bean="student2"/>
+                </entry>
+            </map>
+        </property>
+    </bean>
+
+    <bean id="student1" class="studentmanagement.Student">
+        <property name="firstName">
+            <value>Upeksha</value>
+        </property>
+        <property name="lastName">
+            <value>Dimuthu</value>
+        </property>
+        <property name="number">
+            <value>1</value>
+        </property>
+        <property name="address">
+            <value>Home</value>
+        </property>
+    </bean>
+
+    <bean id="student2" class="studentmanagement.Student">
+        <property name="firstName">
+            <value>Upeksha2</value>
+        </property>
+        <property name="lastName">
+            <value>Dimuthu2</value>
+        </property>
+        <property name="number">
+            <value>2</value>
+        </property>
+        <property name="address">
+            <value>Home2</value>
+        </property>
+    </bean>
+
+
+</beans>
