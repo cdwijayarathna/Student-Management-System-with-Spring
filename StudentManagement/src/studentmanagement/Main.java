@@ -19,8 +19,11 @@ public class Main {
     public static void main(String[] args) {
        ClassPathXmlApplicationContext context=new ClassPathXmlApplicationContext("spring-context.xml");
         context.start();
-        SimpleStudentRepository sip = (SimpleStudentRepository)context.getBean("stdRep");
-        System.out.println(sip.find(2).getFirstName());
+        SimpleStudentRepository sip1 = (SimpleStudentRepository)context.getBean("stdRep");
+        //System.out.println(sip1.find(2).getFirstName());
+        StudentManagementSystem studentManagementSystem=new StudentManagementSystem(sip1);
+        studentManagementSystem.printAllData();
+        //studentManagementSystem.saveNewStudent(new Student())
         context.stop();
     }
 
