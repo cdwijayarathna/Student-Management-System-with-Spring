@@ -7,7 +7,7 @@ package studentmanagement;
 
 /**
  *
- * @author 100552T
+ * @author 100596F
  */
 public interface  StudentRepository {
     public void save(Student student);
