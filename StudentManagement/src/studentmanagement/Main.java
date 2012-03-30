@@ -24,7 +24,9 @@ public class Main {
         //System.out.println(sip1.find(2).getFirstName());
         StudentManagementSystem studentManagementSystem=new StudentManagementSystem(sip1);
         studentManagementSystem.printAllData();
-        //studentManagementSystem.saveNewStudent(new Student())
+        studentManagementSystem.saveNewStudent(new Student("Nadeeshaan","Gunasinghe",3,"Walahanduwa"));
+        System.out.println();
+        studentManagementSystem.printAllData();
         context.stop();
     }
 
