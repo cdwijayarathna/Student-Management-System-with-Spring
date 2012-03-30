@@ -11,6 +11,18 @@ package studentmanagement;
  */
 public class Student {
 
+    public Student() {
+    }
+
+    public Student(String firstName, String lastName, int number, String address) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.number = number;
+        this.address = address;
+    }
+
+
+
     protected String firstName;
     protected String lastName;
     protected int number;
